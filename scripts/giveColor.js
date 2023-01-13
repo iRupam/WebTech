@@ -5,14 +5,14 @@
     var div = document.getElementsByClassName("div")[i].style.backgroundColor = "rgb("+r+","+g+","+b+")";
 }
 */
-var colours = ['red','blue','green','yellow','cyan','orange','white','black'];
+var colours = ['red','blue','green','yellow','cyan','orange'];
 var divs = document.getElementsByClassName("div");
 
 function giveColor() {
     console.log("giveColor ran");
     var i;
     for (i = 0; i < divs.length; i++) {
-        var newColor = Math.floor(Math.random()*colours.length)
+        var newColor = Math.floor(Math.random()*colours.length);
         divs[i].style.backgroundColor = colours[newColor];
     }
 }
