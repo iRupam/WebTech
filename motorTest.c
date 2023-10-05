@@ -1,4 +1,4 @@
-#include<Servo.h>
+#include <Servo.h>
 Servo servo1;
 int trigPin = 9;
 int echoPin = 8;
@@ -20,7 +20,9 @@ void loop() {
 
   if (distance <= 10) {
     servo1.write(90);
-    digitalWrite(ledPin, HIGH); // Turn on the LED when an object is detected
+    if(servo1.write>=30){
+      digitalWrite(ledPin, HIGH); // Turn on the LED when an object is detected
+    }
   }
 }
 
